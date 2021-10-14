@@ -28,4 +28,4 @@ THEN I am again presented with current and future conditions for that city
 https://mikepizzica.github.io/weather-dashboard/
 
 ## Screenshot
-![Screenshot of day planner](./assets/images/screenshot-weather-dashboard.png)
+![Screenshot of weather dashboard](./assets/images/screenshot-weather-dashboard.png)

@@ -1,4 +1,5 @@
 console.log("I'm connected")
+var previousSearches = document.querySelector("#previous-searches")
 
 searchButton = document.getElementById("search");
 searchButton.addEventListener("click", function(event){
@@ -52,19 +53,19 @@ var locationQueryURL = "http://api.openweathermap.org/geo/1.0/direct?q=" + cityN
             day0UVP.textContent = data.current.uvi;
             
             if(data.current.uvi < 3) {
-                day0UVP.setAttribute("id","uv-value-low");
+                day0UVP.setAttribute("style","background-color: rgb(113, 216, 87)");
             }
             else if(data.current.uvi < 6) {
-                day0UVP.setAttribute("id","uv-value-medium");
+                day0UVP.setAttribute("style","background-color: rgb(181, 184, 35)");
             }
             else if(data.current.uvi < 8) {
-                day0UVP.setAttribute("id","uv-value-high");
+                day0UVP.setAttribute("style","background-color: rgb(233, 173, 43)");
             }
             else if(data.current.uvi < 11) {
-                day0UVP.setAttribute("id","uv-value-very-high");
+                day0UVP.setAttribute("style","background-color:rgb(206, 64, 64)");
             }
             else if(11 <= data.current.uvi) {
-                day0UVP.setAttribute("id","uv-value-extremely-high");
+                day0UVP.setAttribute("style","background-color:rgb(159, 63, 197)");
             }
 
             // 1 day from now
@@ -151,6 +152,10 @@ var locationQueryURL = "http://api.openweathermap.org/geo/1.0/direct?q=" + cityN
             day5WindP.textContent = "Wind: " + data.daily[5].wind_speed + " MPH";
             var day5HumidityP = document.getElementById("5-humidity");
             day5HumidityP.textContent = "Humidity: " + data.daily[5].humidity + " %";
+
+            var previousSearch = document.createElement("button");
+            previousSearch.textContent = cityName;
+            previousSearches.append(previousSearch)
         })
     })
 });

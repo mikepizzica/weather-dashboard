@@ -32,7 +32,7 @@ hr {
   height:2px;
 }
 
-.previous-search {
+aside > button {
   width: 100%;
   background-color: rgb(174,174,174);
   color:black;
@@ -58,36 +58,7 @@ img {
   height: 50px;
 }
 
-#uv-value-low {
-  background-color: rgb(113, 216, 87);
-  padding:2px 15px 4px 15px;
-  color: white;
-  border-radius: 8px;
-}
-
-#uv-value-medium {
-  background-color: rgb(226, 230, 32);
-  padding:2px 15px 4px 15px;
-  color: white;
-  border-radius: 8px;
-}
-
-#uv-value-high {
-  background-color: rgb(233, 173, 43);
-  padding:2px 15px 4px 15px;
-  color: white;
-  border-radius: 8px;
-}
-
-#uv-value-very-high {
-  background-color: rgb(206, 64, 64);
-  padding:2px 15px 4px 15px;
-  color: white;
-  border-radius: 8px;
-}
-
-#uv-value-extremely-high {
-  background-color: rgb(159, 63, 197);
+#uv-value {
   padding:2px 15px 4px 15px;
   color: white;
   border-radius: 8px;
@@ -108,7 +79,7 @@ h3 {
 article {
   padding:5px;
   border:solid 1px black;
-  background-color: rgb(97, 132, 170);
+  background-color: rgb(45, 62, 80);
   color:white;
   width: 19%
 }

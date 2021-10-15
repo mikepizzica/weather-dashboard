@@ -1,3 +1,82 @@
-body {
-  background-color: blueviolet;
+h1 {
+  background: linear-gradient(.25turn,rgb(52, 99, 188),rgb(32, 8, 75));
+  color: white;
+  text-align: center;
+  padding-bottom: 15px;
+}
+
+div {
+  display:flex;
+}
+
+aside {
+  width:30vw;
+  margin:0px 15px 0px 8px;
+}
+
+input {
+  text-align: center;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+#search {
+  width: 100%;
+  background-color: rgb(80,152,230);
+  color:white;
+  border-radius: 5px;
+}
+
+hr {
+  background:black;
+  height:2px;
+}
+
+.previous-search {
+  width: 100%;
+  background-color: rgb(174,174,174);
+  color:black;
+  border-radius: 5px;
+  margin-bottom:15px;
+}
+
+main {
+  width:70vw;
+  display:block;
+  flex-wrap: wrap;
+  margin-right:15px;
+}
+
+#right-top {
+  border:solid 1px black;
+  width: 100%;
+  padding:10px 0px 10px 5px;
+  height: 220px;
+}
+
+#a-uv > span {
+  background-color: rgb(21,115,71);
+  padding:2px 15px;
+  color: white;
+  border-radius: 8px;
+}
+
+#right-bottom {
+  margin-top:10px;
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  height: 220px;
+}
+
+h3 {
+  width: 100%;
+}
+
+article {
+  padding:5px;
+  border:solid 1px black;
+  background-color: rgb(45, 62, 80);
+  color:white;
+  width: 19%
 }

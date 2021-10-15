@@ -50,12 +50,44 @@ main {
 #right-top {
   border:solid 1px black;
   width: 100%;
-  padding:10px 0px 10px 5px;
-  height: 220px;
+  padding:10px 0px 0px 5px;
+  height: 230px;
 }
 
-#a-uv > span {
-  background-color: rgb(21,115,71);
+img {
+  height: 50px;
+}
+
+#uv-value-low {
+  background-color: rgb(113, 216, 87);
+  padding:2px 15px 4px 15px;
+  color: white;
+  border-radius: 8px;
+}
+
+#uv-value-medium {
+  background-color: rgb(226, 230, 32);
+  padding:2px 15px 4px 15px;
+  color: white;
+  border-radius: 8px;
+}
+
+#uv-value-high {
+  background-color: rgb(233, 173, 43);
+  padding:2px 15px 4px 15px;
+  color: white;
+  border-radius: 8px;
+}
+
+#uv-value-very-high {
+  background-color: rgb(206, 64, 64);
+  padding:2px 15px 4px 15px;
+  color: white;
+  border-radius: 8px;
+}
+
+#uv-value-extremely-high {
+  background-color: rgb(159, 63, 197);
   padding:2px 15px 4px 15px;
   color: white;
   border-radius: 8px;
@@ -76,7 +108,7 @@ h3 {
 article {
   padding:5px;
   border:solid 1px black;
-  background-color: rgb(45, 62, 80);
+  background-color: rgb(97, 132, 170);
   color:white;
   width: 19%
 }

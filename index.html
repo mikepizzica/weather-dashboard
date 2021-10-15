@@ -16,10 +16,10 @@
   <body>
     <h1>Weather Dashboard</h1>
 
-    <!-- housing for everything below the header -->
+    <!-- container for everything below the header -->
     <div>
 
-      <!-- housing for the left side of the page -->
+      <!-- container for the left side of the page -->
       <aside>
         <h2>Search for a City:</h2>
         <input>
@@ -35,24 +35,24 @@
         <button class=previous-search>Atlanta</button>
       </aside>
 
-      <!-- housing for the right side of the page -->
+      <!-- container for the right side of the page -->
       <main>
 
-        <!-- housing for the top section of the right side of the page -->
+        <!-- container for the top section of the right side of the page -->
         <section id=right-top>
-          <h2><span id=0-location>Atlanta</span><span id=0-date> (3/30/2021)</span></h2>
+          <h2><span id=0-location>Atlanta</span><span id=a-date> (3/30/2021)</span></h2>
           <p id=a-temp>Temp: 74.01 F</p>
           <p id=a-wind>Wind: 6.67 MPH</p>
           <p id=a-humidity>Humidity: 46 %</p>
           <p id=a-uv>UV Index: <span>0.47</span></p>
         </section>
 
-        <!-- housing for the bottom section of the right side of the page -->
+        <!-- container for the bottom section of the right side of the page -->
         <section id=right-bottom>
           <h3>5-Day Forecast:</h3>
             <!-- first card of the bottom section of the right side of the page -->
             <article>
-              <p id=b-date>3/31/2021</p>
+              <h4 id=b-date>3/31/2021</h4>
               <p>image</p>
               <p id=b-temp>Temp 73.72 F</p>
               <p id=b-wind>Wind: 9.53 MPH</p>
@@ -60,7 +60,7 @@
             </article>
             <!-- second card of the bottom section of the right side of the page -->
             <article>
-              <p id=c-date>4/1/2021</p>
+              <h4 id=c-date>4/1/2021</h4>
               <p>image</p>
               <p id=c-temp>Temp 73.72 F</p>
               <p id=c-wind>Wind: 9.53 MPH</p>
@@ -68,7 +68,7 @@
             </article>
             <!-- third card of the bottom section of the right side of the page -->
             <article>
-              <p id=d-date>4/2/2021</p>
+              <h4 id=d-date>4/2/2021</h4>
               <p>image</p>
               <p id=d-temp>Temp 73.72 F</p>
               <p id=d-wind>Wind: 9.53 MPH</p>
@@ -76,7 +76,7 @@
             </article>
             <!-- fourth card of the bottom section of the right side of the page -->
             <article>
-              <p id=e-date>4/3/2021</p>
+              <h4 id=e-date>4/3/2021</h4>
               <p>image</p>
               <p id=e-temp>Temp 73.72 F</p>
               <p id=e-wind>Wind: 9.53 MPH</p>
@@ -84,13 +84,14 @@
             </article>
             <!-- fifth card of the bottom section of the right side of the page -->
             <article>
-              <p id=f-date>4/4/2021</p>
+              <h4 id=f-date>4/4/2021</h4>
               <p>image</p>
               <p id=f-temp>Temp 73.72 F</p>
               <p id=f-wind>Wind: 9.53 MPH</p>
               <p id=f-humidity>Humidity: 66 %</p>
             </article>
         </section>
+
       </main>
     
     </div>
@@ -98,5 +99,6 @@
     <!-- links to scripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="assets/js/main.js"></script>
+
   </body>
 </html>

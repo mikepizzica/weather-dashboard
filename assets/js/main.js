@@ -29,7 +29,7 @@ function printBtn() {
     getWeather.preventDefault();
 
     var APIKey = "cb74eb0e90621bbc58227b168f04cfc8";
-    var locationQueryURL = "http://api.openweathermap.org/geo/1.0/direct?q=" + cityNameInput + ",US&limit=1&appid="+ APIKey;
+    var locationQueryURL = "https://api.openweathermap.org/geo/1.0/direct?q=" + cityNameInput + ",US&limit=1&appid="+ APIKey;
 
     fetch(locationQueryURL)
     .then(function (response) {
@@ -63,7 +63,7 @@ function printBtn() {
             var day0DateSpan = document.getElementById("0-date");
             day0DateSpan.textContent = " (" + new Date(data.current.dt*1000).toLocaleDateString("en-US") + ")";
             var day0IconIMG = document.getElementById("0-img");
-            day0IconIMG.setAttribute("src","http://openweathermap.org/img/wn/" + data.current.weather[0].icon +"@2x.png")
+            day0IconIMG.setAttribute("src","https://openweathermap.org/img/wn/" + data.current.weather[0].icon +"@2x.png")
             var day0TempP = document.getElementById("0-temp");
             day0TempP.textContent = "Temp: " + data.current.temp + "℉";
             var day0WindP = document.getElementById("0-wind");
@@ -98,7 +98,7 @@ function printBtn() {
             var day1DateP = document.getElementById("1-date");
             day1DateP.textContent = new Date(data.daily[1].dt*1000).toLocaleDateString("en-US")
             var day1IconIMG = document.getElementById("1-img");
-            day1IconIMG.setAttribute("src","http://openweathermap.org/img/wn/" + data.daily[1].weather[0].icon +"@2x.png");
+            day1IconIMG.setAttribute("src","https://openweathermap.org/img/wn/" + data.daily[1].weather[0].icon +"@2x.png");
             var day1TempP = document.getElementById("1-temp");
             day1TempP.textContent = "Temp: " + data.daily[1].temp.max + "℉";
             var day1WindP = document.getElementById("1-wind");
@@ -115,7 +115,7 @@ function printBtn() {
             var day2DateP = document.getElementById("2-date");
             day2DateP.textContent = new Date(data.daily[2].dt*1000).toLocaleDateString("en-US")
             var day2IconIMG = document.getElementById("2-img");
-            day2IconIMG.setAttribute("src","http://openweathermap.org/img/wn/" + data.daily[2].weather[0].icon +"@2x.png");
+            day2IconIMG.setAttribute("src","https://openweathermap.org/img/wn/" + data.daily[2].weather[0].icon +"@2x.png");
             var day2TempP = document.getElementById("2-temp");
             day2TempP.textContent = "Temp: " + data.daily[2].temp.max + "℉";
             var day2WindP = document.getElementById("2-wind");
@@ -132,7 +132,7 @@ function printBtn() {
             var day3DateP = document.getElementById("3-date");
             day3DateP.textContent = new Date(data.daily[3].dt*1000).toLocaleDateString("en-US")
             var day3IconIMG = document.getElementById("3-img");
-            day3IconIMG.setAttribute("src","http://openweathermap.org/img/wn/" + data.daily[3].weather[0].icon +"@2x.png");
+            day3IconIMG.setAttribute("src","https://openweathermap.org/img/wn/" + data.daily[3].weather[0].icon +"@2x.png");
             var day3TempP = document.getElementById("3-temp");
             day3TempP.textContent = "Temp: " + data.daily[3].temp.max + "℉";
             var day3WindP = document.getElementById("3-wind");
@@ -149,7 +149,7 @@ function printBtn() {
             var day4DateP = document.getElementById("4-date");
             day4DateP.textContent = new Date(data.daily[4].dt*1000).toLocaleDateString("en-US")
             var day4IconIMG = document.getElementById("4-img");
-            day4IconIMG.setAttribute("src","http://openweathermap.org/img/wn/" + data.daily[4].weather[0].icon +"@2x.png");
+            day4IconIMG.setAttribute("src","https://openweathermap.org/img/wn/" + data.daily[4].weather[0].icon +"@2x.png");
             var day4TempP = document.getElementById("4-temp");
             day4TempP.textContent = "Temp: " + data.daily[4].temp.max + "℉";
             var day4WindP = document.getElementById("4-wind");
@@ -166,7 +166,7 @@ function printBtn() {
             var day5DateP = document.getElementById("5-date");
             day5DateP.textContent = new Date(data.daily[5].dt*1000).toLocaleDateString("en-US")
             var day5IconIMG = document.getElementById("5-img");
-            day5IconIMG.setAttribute("src","http://openweathermap.org/img/wn/" + data.daily[5].weather[0].icon +"@2x.png");
+            day5IconIMG.setAttribute("src","https://openweathermap.org/img/wn/" + data.daily[5].weather[0].icon +"@2x.png");
             var day5TempP = document.getElementById("5-temp");
             day5TempP.textContent = "Temp: " + data.daily[5].temp.max + "℉";
             var day5WindP = document.getElementById("5-wind");
@@ -187,7 +187,7 @@ searchButton.addEventListener("click", function(getWeather){
     getWeather.preventDefault();
 
 var APIKey = "cb74eb0e90621bbc58227b168f04cfc8";
-var locationQueryURL = "http://api.openweathermap.org/geo/1.0/direct?q=" + cityNameInput + ",US&limit=1&appid="+ APIKey;
+var locationQueryURL = "https://api.openweathermap.org/geo/1.0/direct?q=" + cityNameInput + ",US&limit=1&appid="+ APIKey;
 
     fetch(locationQueryURL)
     .then(function (response) {
@@ -199,7 +199,7 @@ var locationQueryURL = "http://api.openweathermap.org/geo/1.0/direct?q=" + cityN
         console.log(data[0].name);
         console.log(data[0].lat);
         console.log(data[0].lon);
-        var weatherQueryURL = "https://api.openweathermap.org/data/2.5/onecall?lat=" + data[0].lat + "&lon=" + data[0].lon + "&exclude=minutely,hourly&appid=" + APIKey + "&units=imperial";
+        var weatherQueryURL = "httpss://api.openweathermap.org/data/2.5/onecall?lat=" + data[0].lat + "&lon=" + data[0].lon + "&exclude=minutely,hourly&appid=" + APIKey + "&units=imperial";
         var cityName = data[0].name;
 
     var previousSearch = document.createElement("button");
@@ -228,7 +228,7 @@ var locationQueryURL = "http://api.openweathermap.org/geo/1.0/direct?q=" + cityN
             var day0DateSpan = document.getElementById("0-date");
             day0DateSpan.textContent = " (" + new Date(data.current.dt*1000).toLocaleDateString("en-US") + ")";
             var day0IconIMG = document.getElementById("0-img");
-            day0IconIMG.setAttribute("src","http://openweathermap.org/img/wn/" + data.current.weather[0].icon +"@2x.png")
+            day0IconIMG.setAttribute("src","https://openweathermap.org/img/wn/" + data.current.weather[0].icon +"@2x.png")
             var day0TempP = document.getElementById("0-temp");
             day0TempP.textContent = "Temp: " + data.current.temp + "℉";
             var day0WindP = document.getElementById("0-wind");
@@ -263,7 +263,7 @@ var locationQueryURL = "http://api.openweathermap.org/geo/1.0/direct?q=" + cityN
             var day1DateP = document.getElementById("1-date");
             day1DateP.textContent = new Date(data.daily[1].dt*1000).toLocaleDateString("en-US")
             var day1IconIMG = document.getElementById("1-img");
-            day1IconIMG.setAttribute("src","http://openweathermap.org/img/wn/" + data.daily[1].weather[0].icon +"@2x.png");
+            day1IconIMG.setAttribute("src","https://openweathermap.org/img/wn/" + data.daily[1].weather[0].icon +"@2x.png");
             var day1TempP = document.getElementById("1-temp");
             day1TempP.textContent = "Temp: " + data.daily[1].temp.max + "℉";
             var day1WindP = document.getElementById("1-wind");
@@ -280,7 +280,7 @@ var locationQueryURL = "http://api.openweathermap.org/geo/1.0/direct?q=" + cityN
             var day2DateP = document.getElementById("2-date");
             day2DateP.textContent = new Date(data.daily[2].dt*1000).toLocaleDateString("en-US")
             var day2IconIMG = document.getElementById("2-img");
-            day2IconIMG.setAttribute("src","http://openweathermap.org/img/wn/" + data.daily[2].weather[0].icon +"@2x.png");
+            day2IconIMG.setAttribute("src","https://openweathermap.org/img/wn/" + data.daily[2].weather[0].icon +"@2x.png");
             var day2TempP = document.getElementById("2-temp");
             day2TempP.textContent = "Temp: " + data.daily[2].temp.max + "℉";
             var day2WindP = document.getElementById("2-wind");
@@ -297,7 +297,7 @@ var locationQueryURL = "http://api.openweathermap.org/geo/1.0/direct?q=" + cityN
             var day3DateP = document.getElementById("3-date");
             day3DateP.textContent = new Date(data.daily[3].dt*1000).toLocaleDateString("en-US")
             var day3IconIMG = document.getElementById("3-img");
-            day3IconIMG.setAttribute("src","http://openweathermap.org/img/wn/" + data.daily[3].weather[0].icon +"@2x.png");
+            day3IconIMG.setAttribute("src","https://openweathermap.org/img/wn/" + data.daily[3].weather[0].icon +"@2x.png");
             var day3TempP = document.getElementById("3-temp");
             day3TempP.textContent = "Temp: " + data.daily[3].temp.max + "℉";
             var day3WindP = document.getElementById("3-wind");
@@ -314,7 +314,7 @@ var locationQueryURL = "http://api.openweathermap.org/geo/1.0/direct?q=" + cityN
             var day4DateP = document.getElementById("4-date");
             day4DateP.textContent = new Date(data.daily[4].dt*1000).toLocaleDateString("en-US")
             var day4IconIMG = document.getElementById("4-img");
-            day4IconIMG.setAttribute("src","http://openweathermap.org/img/wn/" + data.daily[4].weather[0].icon +"@2x.png");
+            day4IconIMG.setAttribute("src","https://openweathermap.org/img/wn/" + data.daily[4].weather[0].icon +"@2x.png");
             var day4TempP = document.getElementById("4-temp");
             day4TempP.textContent = "Temp: " + data.daily[4].temp.max + "℉";
             var day4WindP = document.getElementById("4-wind");
@@ -331,7 +331,7 @@ var locationQueryURL = "http://api.openweathermap.org/geo/1.0/direct?q=" + cityN
             var day5DateP = document.getElementById("5-date");
             day5DateP.textContent = new Date(data.daily[5].dt*1000).toLocaleDateString("en-US")
             var day5IconIMG = document.getElementById("5-img");
-            day5IconIMG.setAttribute("src","http://openweathermap.org/img/wn/" + data.daily[5].weather[0].icon +"@2x.png");
+            day5IconIMG.setAttribute("src","https://openweathermap.org/img/wn/" + data.daily[5].weather[0].icon +"@2x.png");
             var day5TempP = document.getElementById("5-temp");
             day5TempP.textContent = "Temp: " + data.daily[5].temp.max + "℉";
             var day5WindP = document.getElementById("5-wind");

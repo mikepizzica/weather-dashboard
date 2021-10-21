@@ -51,7 +51,7 @@ main {
   border:solid 1px black;
   width: 100%;
   padding:10px 0px 0px 5px;
-  height: 230px;
+  height: fit-content;
 }
 
 img {
@@ -82,4 +82,30 @@ article {
   background-color: rgb(45, 62, 80);
   color:white;
   width: 19%
+}
+
+@media screen and (max-width: 700px) { 
+
+#right-bottom {
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+
+article {
+  width:150px;
+  margin-top:5px;
+  margin-bottom:5px;
+}
+
+h3 {
+  width: auto;
+}
+}
+
+@media screen and (max-width: 500px) { 
+h2 {
+  font-size: 16px;
+}
+
 }

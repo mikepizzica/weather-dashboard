@@ -54,13 +54,22 @@ var locationQueryURL = "https://api.openweathermap.org/geo/1.0/direct?q=" + city
         var weatherQueryURL = "https://api.openweathermap.org/data/2.5/onecall?lat=" + data[0].lat + "&lon=" + data[0].lon + "&exclude=minutely,hourly&appid=" + APIKey + "&units=imperial";
         var cityName = data[0].name;
 
-    var previousSearch = document.createElement("button");
-    previousSearch.textContent = cityName;
-    previousSearch.setAttribute("id",previousSearch.textContent);
-    previousSearches.append(previousSearch);
+        if (previousSearchesArray.indexOf(cityNameInput)===-1) {
+            console.log("already in the array");
+            var previousSearch = document.createElement("button");
+            previousSearch.textContent = cityName;
+            previousSearch.setAttribute("id",previousSearch.textContent);
+            previousSearches.append(previousSearch);
+            previousSearchesArray.push(cityName);
+            localStorage.setItem("previousSearches", JSON.stringify(previousSearchesArray));
+        }
+    // var previousSearch = document.createElement("button");
+    // previousSearch.textContent = cityName;
+    // previousSearch.setAttribute("id",previousSearch.textContent);
+    // previousSearches.append(previousSearch);
 
-    previousSearchesArray.push(cityName);
-    localStorage.setItem("previousSearches", JSON.stringify(previousSearchesArray));
+    // previousSearchesArray.push(cityName);
+    // localStorage.setItem("previousSearches", JSON.stringify(previousSearchesArray));
 
         fetch(weatherQueryURL)
         .then(function (response) {

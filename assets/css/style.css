@@ -32,7 +32,11 @@ hr {
   height:2px;
 }
 
-aside > button {
+#previous-searches {
+  display: inline;
+}
+
+#previous-searches > button {
   width: 100%;
   background-color: rgb(174,174,174);
   color:black;

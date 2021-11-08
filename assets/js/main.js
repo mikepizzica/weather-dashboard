@@ -13,8 +13,6 @@ if(localStorage.getItem("previousSearches") !== null){
     previousSearchesArray = JSON.parse(localStorage.getItem("previousSearches"));
 }
 
-console.log(previousSearchesArray)
-
 function printBtn() {
     for (var i = 0; i < previousSearchesArray.length; i++) {
        var btn = document.createElement("button");

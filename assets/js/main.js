@@ -1,9 +1,7 @@
-console.log("I'm connected")
 var previousSearchesArray = [];
 
 var previousSearches = document.querySelector("#previous-searches")
 previousSearches.addEventListener("click", function(event){
-    console.log(event.target);
     if(event.target.matches("button")) {
         getweather(event.target.id);
     }
@@ -29,10 +27,8 @@ printBtn()
 searchButton = document.getElementById("search");
 searchButton.addEventListener("click", function(event){
     var cityNameInput = document.getElementById("city-name").value;
-    console.log(cityNameInput);
     event.preventDefault();
     getweather(cityNameInput);
-    console.log({event});
 });
 
 function getweather(cityNameInput){

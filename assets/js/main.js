@@ -44,7 +44,6 @@ var locationQueryURL = "https://api.openweathermap.org/geo/1.0/direct?q=" + city
         var cityName = data[0].name;
 
         if (previousSearchesArray.indexOf(cityNameInput)===-1) {
-            console.log("already in the array");
             var previousSearch = document.createElement("button");
             previousSearch.textContent = cityName;
             previousSearch.setAttribute("id",previousSearch.textContent);

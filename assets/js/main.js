@@ -64,15 +64,6 @@ var locationQueryURL = "https://api.openweathermap.org/geo/1.0/direct?q=" + city
             return response.json();
         })
         .then(function (data) {
-            console.log('Weather2 \n----------');
-            console.log(data);
-            console.log(new Date(data.current.dt*1000).toLocaleDateString("en-US"));
-            console.log(data.current.temp);
-            console.log(data.current.wind_speed);
-            console.log(data.current.humidity);
-            console.log(data.current.uvi);
-            console.log(typeof(data.current.uvi));
-            console.log(data.current.weather[0].icon)
             var day0LocationSpan = document.getElementById("0-location");
             day0LocationSpan.textContent = cityName;
             var day0DateSpan = document.getElementById("0-date");
